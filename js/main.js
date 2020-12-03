@@ -54,12 +54,11 @@ function AddRow() {
 
 
 
-
-
 const btn = document.querySelector('.push-to-add');
 let counter = 0;
 
-btn.addEventListener("click", (e) => {
+function addPage(e) {
+
     e.preventDefault();
 
 
@@ -109,4 +108,7 @@ btn.addEventListener("click", (e) => {
     btn.previousElementSibling.appendChild(newRepeating);
 
     counter += 1
-})
+
+}
+
+btn.addEventListener("click", addPage)

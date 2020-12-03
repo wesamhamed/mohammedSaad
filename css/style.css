@@ -67,138 +67,139 @@ td.content{
     text-indent: 10px;
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-} */ 
+} */
 
 
 /* body {
     background: rgb(204,204,204); 
   } */
-  page {
+
+page {
     background: white;
     display: block;
- 
     margin: 0 auto;
     margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-  }
-  page[size="A4"] {  
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+page[size="A4"] {
     width: 21cm;
-    height: 29.7cm; 
-  }
-  div.pageOne{
-    background-image: url('./1.jpg');
+    height: 29.7cm;
+}
+
+div.pageOne {
+    background-image: url('../img/1.jpg');
     background-repeat: no-repeat;
-   background-size: 21cm 29.7cm  ;
-   width: 100%;
-   height: 29.7cm ;
-  }
-  div.pageThree{
-  background-color: rgba(230, 230, 240, 0.13);
-   background-size: 21cm 29.7cm  ;
-   width: 100%;
-   height: 29.7cm ;
+    background-size: 21cm 29.7cm;
+    width: 100%;
+    height: 29.7cm;
+}
 
-  }
+div.pageThree {
+    background-color: rgba(230, 230, 240, 0.13);
+    background-size: 21cm 29.7cm;
+    width: 100%;
+    height: 29.7cm;
+}
 
-  .pageTwo{
-    background-image: url('./2.png');
+.pageTwo {
+    background-image: url('../img/2.png');
     background-repeat: repeat;
-    background-size: 21cm 29.7cm ;
+    background-size: 21cm 29.7cm;
     opacity: 0.5;
-  }
-  div.pageOne img{
-width: 70%;
-margin-top: 20%;
-margin-left: 17%;
-margin-bottom: 80px;
-  }
+}
 
-  .upload-image input{
+div.pageOne img {
+    width: 70%;
+    margin-top: 20%;
+    margin-left: 17%;
+    margin-bottom: 80px;
+}
+
+.upload-image input {
     display: block !important;
     width: 158px !important;
     height: 45px !important;
     opacity: 0 !important;
     overflow: hidden !important;
-  
-
 }
+
 .upload-image {
+    cursor: pointer;
+    width: 158px;
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    /*background-color:#fff;*/
+    background-repeat: no-repeat;
+    background-image: url('http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png');
+    background-size: 40px 40px;
+    margin: 20px;
+    margin-right: -100px;
+    cursor: pointer;
+}
 
-  cursor:pointer;
-  width: 158px;
-  height: 45px;
-  overflow:hidden;
-  position:relative;
-  display:inline-block;
-  /*background-color:#fff;*/
-  background-repeat: no-repeat;
-  background-image:
-    url('http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png');
-  background-size:40px 40px;
-  margin: 20px;
-  margin-right: -100px;
-  cursor: pointer;
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
 }
-textarea{
-  width: 100%;
-  height: 200px;
-  padding: 20px;
+
+img {
+    border-radius: 10%;
 }
-img{
-  border-radius: 10%;
-}
-  path {
+
+path {
     fill: transparent;
-  }
-  
-  
-  text {
-    fill: #FF9800;
-  }
+}
 
-  #show{
+text {
+    fill: #FF9800;
+}
+
+#show {
     direction: rtl;
     width: 100%;
     margin: 10px auto;
-  }
-  #show thead tr th{
-  height: 40px;
-  padding: 5px;
-  text-align: center;
-  border: 2px solid black;}
+}
 
-  #show  tr td{
+#show thead tr th {
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#show tr td {
     font-size: 14px;
-  height: 40px;
-  padding: 5px;
-  text-align: center; 
-  border: 2px solid black;}
-
-button{
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
-  background-color: rgb(207, 207, 243);
-  font-weight: 900;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
 }
-button:hover{
 
-  background-color: rgb(237, 237, 250);
-  color: red;
-
+button {
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: rgb(207, 207, 243);
+    font-weight: 900;
 }
-  
-  
-  @media print {
-    body, page {
-      margin: 0;
-      box-shadow: 0;
-    }
- 
-    textarea{
 
-      width: 100%;
-      
+button:hover {
+    background-color: rgb(237, 237, 250);
+    color: red;
+}
+
+@media print {
+    body,
+    page {
+        margin: 0;
+        box-shadow: 0;
     }
-  }
+    textarea {
+        width: 100%;
+    }
+}
