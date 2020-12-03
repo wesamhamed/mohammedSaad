@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./table.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <page size="A4">
+        <div class="pageOne">
+            <img src="./newlogo.png">
+        </div>
+    </page>
+
+    <page size="A4" class="pageTwo">
+
+        <div class="InfoForm" style="padding: 50px; direction: rtl; text-align: right;">
+
+            <form style="margin-top: 10%;">
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">اسم الفندق</label>
+                    <div class="col-sm-10">
+                        <input type="text" list="nam" class="form-control" id="name" placeholder="اسم الفنددق">
+                        <datalist id="nam">
+              <option> الفندق الاول</option>
+              <option> الفندق الثاني</option>
+              <option>الفندق الثالث</option>
+              <option>الفندق الرابع </option>
+              <option>الفندق الخامس</option>
+              <option>الفندق السادس</option>
+              <option>الفندق السابع</option>
+            </datalist>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">عدد الليالي </label>
+                    <div class="col-sm-10">
+                        <input type="number" list="night" class="form-control" id="nights" placeholder="اختر عدد الليالي ">
+                        <datalist id="night">
+              <option> 1</option>
+              <option> 2</option>
+              <option> 3</option>
+              <option> 4</option>
+
+            </datalist>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">نوع الغرفة </label>
+                    <div class="col-sm-10">
+                        <input type="text" list="rooms" class="form-control" id="room" placeholder="اختر نوع الغرفة  ">
+                        <datalist id="rooms">
+              <option> غرفة 1</option>
+              <option> غرفة 5</option>
+              <option> غرفة 88</option>
+              <option> غرفة 1</option>
+              <option> غرف8 1</option>
+
+
+            </datalist>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">الوجبات</label>
+                    <div class="col-sm-10">
+                        <input type="text" list="foods" class="form-control" id="food" placeholder="اختر نوع الوجبه  ">
+                        <datalist id="foods">
+              <option> وجبــــة 1</option>
+              <option> وجبــــة 5</option>
+              <option> وجبــــة 9</option>
+
+
+
+            </datalist>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">السعر </label>
+                    <div class="col-sm-10">
+                        <input type="tel" list="prices" class="form-control" id="price" placeholder="ادخل السعر   ">
+                        <datalist id="prices">
+              <option> 500$</option>
+              <option> 200$</option>
+              <option> 50$</option>
+
+
+
+            </datalist>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">اختر تاريخ الدخول </label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" id="dataa" placeholder="تاريخ الدخول ">
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">ملاحظات اخــــرى </label>
+                    <div class="col-sm-10">
+                        <textarea placeholder="ملاحظات اخرى " style="outline-width: 0; border: 1px solid gray;" id="textare"></textarea>
+
+                    </div>
+                </div>
+
+
+
+            </form>
+            <button type="submit" onclick="AddRow()"> أضف عنصر </button>
+        </div>
+
+    </page>
+
+
+    <button class="Add push-to-add">اضافة محافظات ومدن بتكلفة مختلفة</button>
+
+
+
+
+
+
+    <!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script src="./table.js"></script>
+
+</body>
+
+</html>

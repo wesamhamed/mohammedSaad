@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./table.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <page size="A4">
+        <div class="pageThree" style="padding-top: 80px;">
+
+
+            <table border="2" id="show" style="width: 90%; padding-top:80px ;">
+                <thead>
+                    <tr>
+                        <th style="min-width: 120px;">اسم الفندق </th>
+                        <th style="min-width: 90px;">عدد الليالي </th>
+                        <th style="min-width: 90px;">نوع الغرفة </th>
+                        <th>الوجبات </th>
+                        <th>السعر </th>
+                        <th style="min-width: 100px;">تاريخ الدخول </th>
+                        <th>ملاحظات اخرى </th>
+                    </tr>
+                </thead>
+            </table>
+            <button id="clearTable">تنظيف</button>
+
+
+
+
+
+
+        </div>
+
+    </page>
+
+    <!-- <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script>
+        function fillTable() {
+
+            var numberOfRows = JSON.parse(localStorage.getItem("numberOfRows"));
+            let data = JSON.parse(localStorage.getItem('data'));
+            // console.log(data)
+            var AddRown = document.getElementById('show');
+
+
+
+            for (let i = 0; i < numberOfRows; i++) {
+                var NewRow = AddRown.insertRow(1);
+                var cel1 = NewRow.insertCell(0);
+                var cel2 = NewRow.insertCell(1);
+                var cel3 = NewRow.insertCell(2);
+                var cel4 = NewRow.insertCell(3);
+                var cel5 = NewRow.insertCell(4);
+                var cel6 = NewRow.insertCell(5);
+                var cel7 = NewRow.insertCell(6);
+
+                if (data != null) {
+                    var {
+                        list1,
+                        list2,
+                        list3,
+                        list4,
+                        list5,
+                        list6,
+                        list7
+                    } = data;
+                    cel1.innerHTML = list1[i];
+                    cel2.innerHTML = list2[i];
+                    cel3.innerHTML = list3[i];
+                    cel4.innerHTML = list4[i];
+                    cel5.innerHTML = list5[i];
+                    cel6.innerHTML = list6[i];
+                    cel7.innerHTML = list7[i];
+                }
+            }
+
+
+        }
+        fillTable()
+
+        document.getElementById("clearTable").addEventListener("click", (event) => {
+            console.log("clear");
+            localStorage.removeItem("data");
+            localStorage.removeItem("numberOfRows");
+            location.reload();
+
+        })
+    </script>
+
+</body>
+
+</html>
